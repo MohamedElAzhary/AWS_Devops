@@ -11,7 +11,9 @@ jobs:
             -   image: circleci/node:13.8.0
         steps:
             -   checkout
-            -   run:    echo "Environment variable is $Developer"
+            -   run:    
+                    command:
+                        echo "Environment variable is $Developer"
 
 # Orchestrate or schedule a set of jobs
 workflows:
