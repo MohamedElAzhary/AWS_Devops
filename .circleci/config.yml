@@ -8,7 +8,7 @@ commands:
         steps:
             -   run:
                     command:
-                        echo $CIRCLE_WORKFLOW_ID
+                        echs
 
 
 jobs:
@@ -18,6 +18,9 @@ jobs:
         steps:
             -   checkout
             -   print_pipeline_id
+            -   run:
+                    when: on_fail
+                    command: echo "This is an Error"
 
             
             
